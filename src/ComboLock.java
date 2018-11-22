@@ -1,5 +1,5 @@
 public class ComboLock {
-    int combo1, combo2, combo3;
+    private int combo1, combo2, combo3;
     int set1, set2, set3;
     int dial;
     boolean firstset;
@@ -10,6 +10,16 @@ public class ComboLock {
         combo1 = c1;
         combo2 = c2;
         combo3 = c3;
+
+        if (c1 < 0){
+            combo1 = 0;
+        }
+        else if (c1 > 39){
+            combo1 = 39;
+        }
+        else{
+            combo1 = c1;
+        }
     }
 
     void turnClockwise(int x){
@@ -23,7 +33,9 @@ public class ComboLock {
 
     }
 
+
     void turnCounterClockwise(){
+
 
     }
 
