@@ -1,8 +1,9 @@
 public class ComboLock {
+
     private int combo1, combo2, combo3;
-    int set1, set2, set3;
-    int dial;
-    boolean firstset;
+    private int set1, set2, set3;
+    private int dial;
+    private boolean firstSet = true;
 
 
     ComboLock(int c1, int c2, int c3){
@@ -20,7 +21,31 @@ public class ComboLock {
         else{
             combo1 = c1;
         }
+        if(c2 < 0){
+            combo2 = 0;
+        }
+        else if(c2 > 39){
+            combo2 = 0;
+        }
+        else{
+            combo2 = 0;
+        }
+        if (c3 < 0) {
+            combo3 = 0;
+        }
+        else if (c3 > 39){
+            combo3 = 39;
+        }
+        else{
+            combo3 = c3;
+        }
+
+        set1 = 0;
+        set2 = 0;
+        set3 = 0;
+        dial = 0;
     }
+
 
     void turnClockwise(int x){
 
@@ -34,14 +59,39 @@ public class ComboLock {
     }
 
 
-    void turnCounterClockwise(){
+    void turnCounterClockwise(int x){
+        for (int i = 0; i < x; i++){
+            dial ++;
+            if(dial > 39){
+                dial = 0;
+            }
+        }
+        if(firstSet){
+            set1 = dial;
+            firstSet = false;
+        }
+        else{
+            set3 = dial;
+        }
 
 
     }
 
-
-
-
+    public boolean open(){
+        if(combo1 == set1 && combo2 == set2 && combo3 == set3){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public void reset(){
+        dial = 0;
+        set1 = 0;
+        set2 = 0;
+        set3 = 0;
+        firstSet = true;
+    }
 
 
 
