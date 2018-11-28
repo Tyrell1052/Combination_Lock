@@ -1,4 +1,4 @@
-public class Main {
+public class Main {// This will be the driver to control the class
 
     public static void main(String[] args) {
         ComboLock testLock = new ComboLock(5,18,28);
