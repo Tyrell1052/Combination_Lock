@@ -1,11 +1,13 @@
-public class ComboLock {
+public class ComboLock { // Creating ComboLock class
 
+    // Private integer fields
     private int combo1, combo2, combo3;
     private int set1, set2, set3;
     private int dial;
     private boolean firstSet = true;
 
 
+    // Creating ComboLock Constructor - this will take in 3 parameters c1,c2 & c3
     ComboLock(int c1, int c2, int c3){
 
         combo1 = c1;
@@ -40,6 +42,7 @@ public class ComboLock {
             combo3 = c3;
         }
 
+        //assigning to 0
         set1 = 0;
         set2 = 0;
         set3 = 0;
@@ -47,7 +50,7 @@ public class ComboLock {
     }
 
 
-    void turnClockwise(int x){
+    void turnClockwise(int x){//method for dial to turn clockwise
 
         for (int i = 0; i < x; i++){
             dial --;
@@ -59,7 +62,7 @@ public class ComboLock {
     }
 
 
-    void turnCounterClockwise(int x){
+    void turnCounterClockwise(int x){//method for dial to turn counter clockwise
         for (int i = 0; i < x; i++){
             dial ++;
             if(dial > 39){
