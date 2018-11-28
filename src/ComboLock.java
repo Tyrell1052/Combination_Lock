@@ -49,7 +49,6 @@ public class ComboLock { // Creating ComboLock class
         dial = 0;
     }
 
-
     void turnClockwise(int x){//method for dial to turn clockwise.
 
         for (int i = 0; i < x; i++){
@@ -60,7 +59,6 @@ public class ComboLock { // Creating ComboLock class
         }
 
     }
-
 
     void turnCounterClockwise(int x){//method for dial to turn counter clockwise.
         for (int i = 0; i < x; i++){
