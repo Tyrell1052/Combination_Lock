@@ -50,7 +50,7 @@ public class ComboLock { // Creating ComboLock class
     }
 
 
-    void turnClockwise(int x){//method for dial to turn clockwise
+    void turnClockwise(int x){//method for dial to turn clockwise.
 
         for (int i = 0; i < x; i++){
             dial --;
@@ -62,7 +62,7 @@ public class ComboLock { // Creating ComboLock class
     }
 
 
-    void turnCounterClockwise(int x){//method for dial to turn counter clockwise
+    void turnCounterClockwise(int x){//method for dial to turn counter clockwise.
         for (int i = 0; i < x; i++){
             dial ++;
             if(dial > 39){
